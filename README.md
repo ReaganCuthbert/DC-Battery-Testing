@@ -94,7 +94,7 @@ Current published by manufacturer in amperes. Defaults to 250.
   loadCorrection(77,255); //255 amps
 ```
 
-### temperature:
+#### temperature:
 
 Type: Number
 
@@ -103,6 +103,48 @@ Average Electrolyte Temperature. Defaults to 77.
 ```javascript
   loadCorrection(77,255,96); //96°F
 ```
+
+## Float Voltage
+
+```javascript
+  import { floatVoltage } from 'dc-battery-testing';
+```
+
+Returns the Temperature Corrected Float Voltage in Volts DC(VDC).
+
+### floatVoltage([recommended cell voltage],cells,temperature)
+
+#### recommended cell voltage:
+
+Type: Number
+
+Recommended Cell Voltage published by battery manufacturer at 77°F. Required.
+
+```javascript
+  floatVoltage(2.25,/*cells*/,/*temperature*/); //2.25 volts per cell
+```
+
+#### cells:
+
+Type: Number
+
+number of cells in series. Required.
+
+```javascript
+  floatVoltage(/*rec cell voltage*/,230,/*temperature*/); //230 cells
+```
+
+#### temperature: 
+
+Type: Number
+
+Average observed electrolyte or negative post temperature. Required.
+
+```javascript
+  floatVoltage(/*rec cell voltage*/,/*cells*/,70); //70°F
+```
+
+
 
 
   
