@@ -2,6 +2,10 @@
 
 Calculations package for DC battery electricians.
 
+```javascript
+npm install --save dc-battery-testing
+```
+
 # API
 
 to place in code use the following require statement:
