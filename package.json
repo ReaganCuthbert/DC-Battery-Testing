@@ -8,10 +8,6 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "assert": "^1.4.1",
-    "jake": "^8.0.15"
-  },
   "dependencies": {
     "lodash.find": "^4.6.0",
     "lodash.foreach": "^4.5.0"
