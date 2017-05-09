@@ -23,7 +23,7 @@ for ES6 modules:
 ### timeAdjust([actual discharge time],[rated disharge time],temperature)
 
 
-#### actual discharge time
+#### actual discharge time:
 
 Type: Array or Number. 
 
@@ -37,4 +37,27 @@ If Array, three elements can be passed in (hours,minutes,seconds). Hour defaults
   timeAdjust([1,15,30]) //results to 1 hours, 15 minutes, and 30 seconds.
 ```
 
+#### rated discharge time:
+
+Type: Array or Number
+
+If Number, the value passed in will be the amount of hours. Minutes and seconds will default to 0.
+```javascript
+  timeAdjust(1,2); //results to 2 hours for rated discharge time.
+```
+
+If Array, three elements can be passed in (hours,minutes,seconds). Hour defaults to 1; Minutes and Seconds default to 0.
+```javascript
+  timeAdjust(1,[1,12,20]) //results to 1 hours, 12 minutes, and 20 seconds.
+```
+
+#### temperature:
+
+Type: Number
+
+Average Electrolyte Temperature. Defaults to 77.
+
+```javascript
+  timeAdjust(1,1,57) //results to 57°F.
+```
 
