@@ -20,6 +20,8 @@ for ES6 modules:
   import { timeAdjust } from 'dc-battery-testing';
 ```
 
+Returns the Corrected Capacity as a percentage.
+
 ### timeAdjust([actual discharge time],[rated disharge time],temperature)
 
 
@@ -29,12 +31,12 @@ Type: Array or Number.
 
 If Number, the value passed in will be the amount of hours. Minutes and seconds will default to 0.
 ```javascript
-  timeAdjust(2); //results to 2 hours for actual discharge time.
+  timeAdjust(2); //2 hours for actual discharge time
 ```
 
 If Array, three elements can be passed in (hours,minutes,seconds). Hour defaults to 1; Minutes and Seconds default to 0.
 ```javascript
-  timeAdjust([1,15,30]) //results to 1 hours, 15 minutes, and 30 seconds.
+  timeAdjust([1,15,30]) //1 hours, 15 minutes, and 30 seconds
 ```
 
 #### rated discharge time:
@@ -43,12 +45,12 @@ Type: Array or Number
 
 If Number, the value passed in will be the amount of hours. Minutes and seconds will default to 0.
 ```javascript
-  timeAdjust(1,2); //results to 2 hours for rated discharge time.
+  timeAdjust(1,2); //2 hours for rated discharge time
 ```
 
 If Array, three elements can be passed in (hours,minutes,seconds). Hour defaults to 1; Minutes and Seconds default to 0.
 ```javascript
-  timeAdjust(1,[1,12,20]) //results to 1 hours, 12 minutes, and 20 seconds.
+  timeAdjust(1,[1,12,20]) //1 hours, 12 minutes, and 20 seconds
 ```
 
 #### temperature:
@@ -58,6 +60,52 @@ Type: Number
 Average Electrolyte Temperature. Defaults to 77.
 
 ```javascript
-  timeAdjust(1,1,57) //results to 57°F.
+  timeAdjust(1,1,57) //57°F
 ```
+
+## Load Correction
+
+```javascript
+  import { loadCorrection } from 'dc-battery-testing';
+```
+
+Returns the Corrected Load Capacity in Amps DC.
+
+
+### loadCorrection([standard temperature],[published discharge current],temperature)
+
+#### standard temperature:
+
+Type: Number
+
+Selects correction factor chart based off battery manufacturer. Only takes 68 and 77 as viable arguments. Defaults to 77.
+
+```javascript
+  loadCorrection(68); //uses the 68 KT(correction factor) chart
+```
+
+#### published discharge current:
+
+Type: Number
+
+Current published by manufacturer in amperes. Defaults to 250.
+
+```javascript
+  loadCorrection(77,255); //255 amps
+```
+
+### temperature:
+
+Type: Number
+
+Average Electrolyte Temperature. Defaults to 77.
+
+```javascript
+  loadCorrection(77,255,96); //96°F
+```
+
+
+  
+
+
 
