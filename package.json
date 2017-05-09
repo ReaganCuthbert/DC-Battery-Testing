@@ -1,12 +1,16 @@
 {
   "name": "dc-battery-testing",
   "version": "1.0.0",
-  "description": "Calculations for battery-testing",
+  "description": "Calculations for Battery Testing",
   "main": "lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReaganCuthbert/DC-Battery-Testing.git"
+  },
+  "author": "Reagan Cuthbertson",
   "license": "ISC",
   "dependencies": {
     "lodash.find": "^4.6.0",
