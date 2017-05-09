@@ -2,7 +2,7 @@
 
 Calculations package for DC battery electricians.
 
-#API
+# API
 
 to place in code use the following require statement:
 ```javascript
@@ -14,5 +14,12 @@ for ES6 modules:
   import DCTesting from 'dc-battery-testing';
 ```
 
+## Time-Adjustment Method
+
+```javascript
+  import { timeAdjust } from 'dc-battery-testing';
+```
+
+### timeAdjust([actual discharge time],[rated disharge time],temperature)
 
 
